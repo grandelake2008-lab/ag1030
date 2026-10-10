@@ -1,0 +1,25 @@
+@import url('https://googleapis.com');
+
+body {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  background-color: #f0d0fb;
+  color: #bd2e76;
+}
+h1, h2, h3 {
+  color: #bd2e76;
+}
+html {
+  border: 16px solid #599f6a;
+  min-height: 100vh;
+}
+a {
+  display: inline-block; 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+  text-decoration: none; 
+}
+a:hover {
+  transform: translateY(-4px); 
+}
+p {
+  line-height: 1.5; /* Smaller, tighter gap between text lines */
+}
