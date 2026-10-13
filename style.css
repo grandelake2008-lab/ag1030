@@ -23,3 +23,211 @@ a:hover {
 p {
   line-height: 1.5; /* Smaller, tighter gap between text lines */
 }
+/* --- RESPONSIVE ALBUM GRID SYSTEM --- */
+
+/* This container automatically drops cards to a new line on phones */
+.album-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/* Custom cards that blend perfectly with background colors */
+.album-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #599f6a; /* Uses theme's green for the card outline */
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.4); /* Subtle transparent white to make text readable */
+}
+
+/* Makes sure the image scales down nicely on narrow mobile screens */
+.album-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.album-card p {
+  margin: 10px 0 5px 0;
+}
+
+.album-card .source-link {
+  font-size: 0.85em;
+  margin: 0;
+}
+/* Update this specific section inside style.css file */
+.album-card img {
+  width: 100%;          /* Stretches to fit the width of the card card container */
+  max-width: 250px;     /* Prevents images from getting too huge on large screens */
+  height: 250px;        /* Forces a uniform square height for all artwork */
+  object-fit: cover;    /* Crops the edges cleanly without squishing the image proportions */
+  border-radius: 4px;   /* Keeps your neat rounded edges */
+}
+/* ==========================================
+   3. EARLY LIFE & CAREER STYLES (2 Columns)
+   ========================================== */
+
+/* Update this specific block inside section 3 of style.css file */
+
+/* Keeps the 2 images side-by-side on PC desktop and pulls them to the left border */
+.career-grid {
+  display: flex;             
+  justify-content: flex-start; /* Changed from center to flex-start to pull items left */
+  gap: 20px;                 
+  margin: 20px 0;              /* Standard top/bottom margin, clears out right side spacing */
+  max-width: 600px;
+  padding: 0;                
+  width: 100%;
+}
+
+
+/* Card layout settings */
+.career-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #599f6a;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  flex: 1;                   
+}
+
+/* SMART IMAGE SCALE: Constrains childhood photo frame size metrics uniformly */
+.career-card img {
+  width: 100%;
+  max-width: 220px;          
+  height: 250px;             
+  object-fit: cover;         
+  border-radius: 4px;
+}
+
+.career-card .source-link {
+  font-size: 0.85em;
+  margin: 10px 0 0 0;
+}
+
+/* Smartphone Overrides for the Early Life page layout viewports */
+@media screen and (max-width: 768px) {
+  .career-grid {
+    flex-direction: column;  /* Forces side-by-side layout rows to vertical on phones */
+    align-items: center;
+  }
+  
+  .career-card {
+    width: 100%;             
+    max-width: 280px;
+  }
+}
+
+/* ==========================================
+   4. HOME PAGE STYLES (Navigation & Main Card)
+   ========================================== */
+
+/* Keeps navigation side-by-side on PC, stacks it on mobile phone screens */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+/* Centers the card on your screen and applies the left nudge to match the other pages */
+.home-grid {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0 20px -15px; /* Pulls left slightly to match your discography page alignment */
+  padding: 0;
+}
+
+/* Targets the main image block container */
+.home-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #599f6a;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-left: 20px; /* Aligns perfectly inward with early life childhood photo card */
+  width: 100%;
+  max-width: 320px;  /* Clean size constraints for desktops */
+}
+
+/* SMART IMAGE SCALE: Constrains main profile image framing cleanly */
+.home-card img {
+  width: 100%;
+  height: 350px;       /* Gives it a sleek, uniform portrait frame display height */
+  object-fit: cover;   /* Crops proportions nicely if file dimensions stretch */
+  border-radius: 4px;
+}
+
+.home-card .source-link {
+  font-size: 0.85em;
+  margin: 10px 0 0 0;
+}
+
+/* Update this specific block near the bottom of the style.css file */
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    /* REMOVED: flex-direction: column; */
+    flex-wrap: wrap; /* Keeps them horizontal, but lets them drop neatly if on a microscopic screen */
+    gap: 15px;       /* Slightly tightens the spacing so they fit on narrow phone widths */
+  }
+  
+  .home-card {
+    max-width: 280px; 
+  }
+}
+
+/* ==========================================
+   5. LEGACY PAGE STYLES (Alignment & Card)
+   ========================================== */
+
+/* Centers the layout and applies the same left offsets as other pages */
+.legacy-grid {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0 20px -15px; /* Matches the left-pull alignment of the other pages */
+  padding: 0;
+}
+
+/* Formats the card to look identical to homepage card configuration */
+.legacy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 2px solid #599f6a;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-left: 20px; /* Aligns inward seamlessly with the home page layout */
+  width: 100%;
+  max-width: 320px;  
+}
+
+/* SMART IMAGE SCALE: Fits personal tour photo nicely without layout bending */
+.legacy-card img {
+  width: 100%;
+  height: 350px;       /* Sleek vertical frame height matching homepage photo */
+  object-fit: cover;   /* Crops custom photo smoothly if resized */
+  border-radius: 4px;
+}
+
+.legacy-card .source-link {
+  font-size: 0.85em;
+  margin: 10px 0 0 0;
+}
+
+/* Mobile Overrides for smaller smartphone panels */
+@media screen and (max-width: 768px) {
+  .legacy-card {
+    max-width: 280px; /* Drops scale smoothly on narrow screen widths */
+  }
+}

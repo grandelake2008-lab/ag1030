@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discography</title>
 </head>
@@ -10,24 +11,41 @@
     <hr>
     <a href="index.html">Back to Home</a>
     <hr>
-    <img src="Yours_Truly_Artwork.webp" alt="Yours Truly Ariana Grande Album Cover" width="350px">
-    <img src="Ariana_Grande_-_Eternal_Sunshine.png" alt="Eternal Sunshine Ariana Grande Album Cover" width="350px">
-    <img src="Ariana_Grande_-_Positions.png" alt="Positions Ariana Grande Album Cover" width="350px">
-    <img src="Ariana_Grande_-_Petal.png" alt="Petal Ariana Grande Album Cover" width="350px">
-    <div style="display: flex; gap: 263px ;">
-<p>Yours Truly</p>
-<p>Eternal Sunshine</p>
-<p>Positions</p>
-<p>Petal</p>
-</div>
-<hr>
-<div style="display: flex; gap: 45px ;">
-<p>Image Source: <a href="https://arianagrande.fandom.com/wiki/Yours_Truly" target="_blank" rel= "noopener, noreferrer">Open Fandom in a New Tab</a></p>
-<p>Image Source: <a href="https://en.wikipedia.org/wiki/Eternal_Sunshine_%28album%29" target="_blank" rel= "noopener, noreferrer">Open Wikipedia in a New Tab</a></p>
-<p>Image Source: <a href="https://en.wikipedia.org/wiki/Positions_%28album%29" target="_blank" rel="noopener, noreferrer">Open Wikipedia in a New Tab</a></p>
-<p>Image Source: <a href="https://en.wikipedia.org/wiki/Petal_%28album%29" target="_blank" rel="noopener, noreferrer">Open Wikipedia in a New Tab</a></p>
-</div>
-<hr>
+
+    <!-- This responsive grid container automatically drops columns to a new line on phones -->
+    <div class="album-grid">
+        
+        <!-- Album 1: Yours Truly -->
+        <div class="album-card">
+            <img src="Yours_Truly_Artwork.webp" alt="Yours Truly Ariana Grande Album Cover">
+            <p><strong>Yours Truly</strong></p>
+            <p class="source-link">Image Source: <a href="https://arianagrande.fandom.com/wiki/Yours_Truly" target="_blank" rel="noopener, noreferrer">Open Fandom</a></p>
+        </div>
+
+        <!-- Album 2: Eternal Sunshine -->
+        <div class="album-card">
+            <img src="Ariana_Grande_-_Eternal_Sunshine.png" alt="Eternal Sunshine Ariana Grande Album Cover">
+            <p><strong>Eternal Sunshine</strong></p>
+            <p class="source-link">Image Source: <a href="https://en.wikipedia.org/wiki/Eternal_Sunshine_%28album%29" target="_blank" rel="noopener, noreferrer">Open Wikipedia</a></p>
+        </div>
+
+        <!-- Album 3: Positions -->
+        <div class="album-card">
+            <img src="Ariana_Grande_-_Positions.png" alt="Positions Ariana Grande Album Cover">
+            <p><strong>Positions</strong></p>
+            <p class="source-link">Image Source: <a href="https://en.wikipedia.org/wiki/Positions_%28album%29" target="_blank" rel="noopener, noreferrer">Open Wikipedia</a></p>
+        </div>
+
+        <!-- Album 4: Petal -->
+        <div class="album-card">
+            <img src="Ariana_Grande_-_Petal.png" alt="Petal Ariana Grande Album Cover">
+            <p><strong>Petal</strong></p>
+            <p class="source-link">Image Source: <a href="https://en.wikipedia.org/wiki/Petal_%28album%29" target="_blank" rel="noopener, noreferrer">Open Wikipedia</a></p>
+        </div>
+
+    </div>
+
+    <hr>
     <p>Ariana Grande has kept her artistry going. She has released 8 studio albums over the course of 13 years (and counting). These albums are defined by her notable R&B aesthetic as well as polished pop. She has received 3 Grammys, with one of them being for her 4th studio album, Sweetener, for Best Pop Vocal Album. The other two were for Best Pop Duo/Group Performance, one with Lady Gaga for "Rain on Me" and one with Cynthia Erivo for "Defying Gravity" from the movie Wicked. Even though most of her discography has not been awarded by the Grammys, she has received many awards from other things like the VMAs or Video Music Awards, and her cultural impact cannot be denied.</p>
 </body>
 </html>
